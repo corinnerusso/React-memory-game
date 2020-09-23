@@ -2,7 +2,7 @@ import React from "react";
 import Login from "./Login";
 import Game from "./Game";
 import Navbar from "./Navbar";
-import Endgame from "./EndGame";
+import EndGame from "./EndGame";
 
 class Main extends React.Component {
   state = {
@@ -25,11 +25,11 @@ class Main extends React.Component {
   };
 
   render() {
-    const { showLogin, showEndGame, score, name } = this.state;
+    const { showLogin, name, score, showEndGame } = this.state;
     return (
       <div>
         {showLogin ? <Login name={this.handleLogin} /> : null}
-        {showEndGame ? <Endgame newgame={this.handleEndGame} /> : null}
+        {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
         <Navbar name={name} score={score} />
         <Game endGame={this.handleEndGame} />
       </div>

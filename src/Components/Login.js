@@ -24,7 +24,9 @@ class Login extends React.Component {
                 className="form-control"
                 onChange={this.handleChange}
               />
-              <small className="form-text text-muted"></small>
+              <small className="form-text text-muted">
+                This is a memory game
+              </small>
             </div>
             <button onClick={this.handleClick} className="btn btn-primary">
               SUBMIT
